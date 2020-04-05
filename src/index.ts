@@ -4,7 +4,7 @@ import fs from 'fs';
 
 const matches = fs
   .readFileSync('football.csv', {
-    encoding: 'utf -8'
+    encoding: 'utf-8'
   })
   .split('\n')
   .map(
@@ -14,3 +14,4 @@ const matches = fs
   );
 
 console.log(matches)
+// let manUnitedWins = 0;
