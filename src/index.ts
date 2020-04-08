@@ -1,17 +1,25 @@
-import fs from 'fs';
+import { CsvFileReader } from './CsvFileReader';
 
-// console.log("Index fule works")
+const reader = new CsvFileReader('football.csv')
+reader.read()
 
-const matches = fs
-  .readFileSync('football.csv', {
-    encoding: 'utf-8'
-  })
-  .split('\n')
-  .map(
-    (row: string): string[] => {
-      return row.split(',');
-    }
-  );
+//enum - enumeration - shows we are referencing closely related values
+enum MatchResult {
+  HomeWin = 'H',
+  AwayWin = 'A',
+  Draw = 'D'
+}
 
-console.log(matches)
-// let manUnitedWins = 0;
+let manUnitedWins = 0;
+
+// If Man United was home and won or was away team and won
+for (let match of reader.data) {
+  if (match[1] === 'Man United' && match[5] === 'H') {
+    manUnitedWins++
+  } else if (match[2] === 'Man United' && match[5] === 'A' ) {
+    manUnitedWins++
+  }
+}
+
+
+console.log(`Man United won ${manUnitedWins} games`)
