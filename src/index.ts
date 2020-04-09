@@ -5,8 +5,6 @@ reader.read()
 
 console.log("Date1", reader.data[0][0])
 
-
-
 let manUnitedWins = 0;
 
 // If Man United was home and won or was away team and won
