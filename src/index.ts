@@ -3,12 +3,9 @@ import { CsvFileReader } from './CsvFileReader';
 const reader = new CsvFileReader('football.csv')
 reader.read()
 
-//enum - enumeration - shows we are referencing closely related values
-enum MatchResult {
-  HomeWin = 'H',
-  AwayWin = 'A',
-  Draw = 'D'
-}
+console.log("Date1", reader.data[0][0])
+
+
 
 let manUnitedWins = 0;
 

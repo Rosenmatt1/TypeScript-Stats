@@ -3,13 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var CsvFileReader_1 = require("./CsvFileReader");
 var reader = new CsvFileReader_1.CsvFileReader('football.csv');
 reader.read();
-//enum - enumeration - shows we are referencing closely related values
-var MatchResult;
-(function (MatchResult) {
-    MatchResult["HomeWin"] = "H";
-    MatchResult["AwayWin"] = "A";
-    MatchResult["Draw"] = "D";
-})(MatchResult || (MatchResult = {}));
+console.log("Date1", reader.data[0][0]);
 var manUnitedWins = 0;
 // If Man United was home and won or was away team and won
 for (var _i = 0, _a = reader.data; _i < _a.length; _i++) {
