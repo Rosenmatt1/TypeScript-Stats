@@ -1,6 +1,6 @@
-import { CsvFileReader } from './CsvFileReader';
+import { MatchReader } from './MatchReader';
 
-const reader = new CsvFileReader('football.csv')
+const reader = new MatchReader('football.csv')
 reader.read()
 
 console.log("Date1", reader.data[0][0])
